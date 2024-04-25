@@ -18,7 +18,7 @@ export const authenticate = async (req : Request, res : Response, next : NextFun
         return res.status(401).json({error : error.message})
     }
 
-    const token = bearer.split('Bearer ')[1].trim()
+    const [, token] = bearer.split(' ')
     
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET)
