@@ -5,8 +5,12 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
 import { toast } from "react-toastify";
+import { useAuth } from "@/hooks/useAuth";
+import { isManager } from "@/utils/policies";
 
 const DashboardView = () => {
+
+  const { data: user, isLoading: authLoading } = useAuth()
   const { data, isLoading } = useQuery({
     queryKey: ["projects"],
     queryFn: getProjects,
@@ -24,9 +28,9 @@ const DashboardView = () => {
     }
   });
 
-  if (isLoading) return "Cargando...";
+  if (isLoading && authLoading) return "Cargando...";
 
-  return (
+  if(data) return (
     <>
       <h1 className="text-5xl font-black">Mis Proyectos</h1>
       <p className="text-2xl font-light text-gray-500 mt-5">
@@ -54,6 +58,12 @@ const DashboardView = () => {
             >
               <div className="flex min-w-0 gap-x-4">
                 <div className="min-w-0 flex-auto space-y-2">
+                  <div>
+                  {isManager(project.manager, user!._id) ?
+                    <p className="font-bold text-xs uppercase text-gray-500 border-2 inline-block py-1 px-5 mb-2">Manager</p> :
+                    <p className="font-bold text-xs uppercase text-gray-500 border-2 inline-block py-1 px-5 mb-2">Colaborador</p>
+                  }
+                  </div>
                   <Link
                     to={`projects/${project._id}`}
                     className="text-gray-600 cursor-pointer hover:underline text-3xl font-bold"
@@ -93,23 +103,28 @@ const DashboardView = () => {
                           Ver Proyecto
                         </Link>
                       </Menu.Item>
-                      <Menu.Item>
-                        <Link
-                          to={`/projects/${project._id}/edit`}
-                          className="block px-3 py-1 text-sm leading-6 text-gray-900"
-                        >
-                          Editar Proyecto
-                        </Link>
-                      </Menu.Item>
-                      <Menu.Item>
-                        <button
-                          type="button"
-                          className="block px-3 py-1 text-sm leading-6 text-red-500"
-                          onClick={() => mutate(project._id)}
-                        >
-                          Eliminar Proyecto
-                        </button>
-                      </Menu.Item>
+
+                      {isManager(project.manager, user!._id) && (
+                        <>
+                          <Menu.Item>
+                            <Link
+                              to={`/projects/${project._id}/edit`}
+                              className="block px-3 py-1 text-sm leading-6 text-gray-900"
+                            >
+                              Editar Proyecto
+                            </Link>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <button
+                              type="button"
+                              className="block px-3 py-1 text-sm leading-6 text-red-500"
+                              onClick={() => mutate(project._id)}
+                            >
+                              Eliminar Proyecto
+                            </button>
+                          </Menu.Item>
+                        </>
+                      )}
                     </Menu.Items>
                   </Transition>
                 </Menu>

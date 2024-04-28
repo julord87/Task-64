@@ -1,9 +1,10 @@
-import { Task } from "@/types/index";
+import { Project, Task } from "@/types/index";
 import TaskCard from "./TaskCard";
 import { statusTranslations } from "@/locales/es";
 
 type TaskListProps = {
   tasks: Task[];
+  manager: Project["manager"];
 };
 
 type GropuedTasks = {
@@ -26,7 +27,7 @@ const statusStyles : { [key: string]: string } = {
   completed: "border-t-emerald-500",
 };
 
-export default function TaskList({ tasks }: TaskListProps) {
+export default function TaskList({ tasks, manager }: TaskListProps) {
   const groupedTasks = tasks.reduce((acc, task) => {
     let currentGroup = acc[task.status] ? [...acc[task.status]] : [];
     currentGroup = [...currentGroup, task];
@@ -49,7 +50,7 @@ export default function TaskList({ tasks }: TaskListProps) {
                   No Hay tareas
                 </li>
               ) : (
-                tasks.map((task) => <TaskCard key={task._id} task={task} />)
+                tasks.map((task) => <TaskCard key={task._id} task={task} manager={manager} />)
               )}
             </ul>
           </div>

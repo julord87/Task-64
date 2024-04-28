@@ -4,7 +4,7 @@ import { ProjectController } from "../controllers/ProjectController"
 import { handleInputErrors } from "../middleware/validation";
 import { TaskController } from "../controllers/TaskController";
 import { projectExists } from "../middleware/project";
-import { taskBelongsToProject, taskExists } from "../middleware/task";
+import { hasAuthorization, taskBelongsToProject, taskExists } from "../middleware/task";
 import { authenticate } from "../middleware/auth";
 import { TeamMemberController } from "../controllers/TeamController";
 
@@ -56,7 +56,7 @@ router.delete("/:id",
 router.param('projectId', projectExists)
 
 router.post("/:projectId/tasks",
-
+    hasAuthorization,
     param("projectId").isMongoId().withMessage("El ID del proyecto no es valido"),
     body("name").notEmpty().withMessage("El nombre de la tarea es obligatorio"),
     body("description").notEmpty().withMessage("La descripción de la tarea es obligatoria"),
@@ -84,6 +84,7 @@ router.get("/:projectId/tasks/:taskId",
 )
 
 router.put("/:projectId/tasks/:taskId",
+    hasAuthorization,
     param("projectId").isMongoId().withMessage("El ID del proyecto no es valido"),
     param("taskId").isMongoId().withMessage("El ID del proyecto no es valido"),
     body("name").notEmpty().withMessage("El nombre de la tarea es obligatorio"),
@@ -94,6 +95,7 @@ router.put("/:projectId/tasks/:taskId",
 )
 
 router.delete("/:projectId/tasks/:taskId",
+    hasAuthorization,
     param("projectId").isMongoId().withMessage("El ID del proyecto no es valido"),
     param("taskId").isMongoId().withMessage("El ID del proyecto no es valido"),
     handleInputErrors,
@@ -129,8 +131,8 @@ router.post("/:projectId/team",
     TeamMemberController.addMemberById
 )
 
-router.delete("/:projectId/team",
-    body('id').isMongoId().withMessage("El ID del usuario no es valido"),
+router.delete("/:projectId/team/:userId",
+    param('userId').isMongoId().withMessage("El ID del usuario no es valido"),
     handleInputErrors,
 
     TeamMemberController.removeMemberById
