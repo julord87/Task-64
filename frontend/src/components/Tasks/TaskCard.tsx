@@ -88,7 +88,7 @@ export default function TaskCard({ task, manager }: TaskCardProps) {
                   <Menu.Item>
                     <button
                       type="button"
-                      className="block px-3 py-1 text-sm leading-6 text-red-500"
+                      className="block px-3 py-1 text-sm leading-6 text-gray-400"
                       onClick={() => mutate({projectId, taskId: task._id})}
                     >
                       Eliminar Tarea

@@ -19,7 +19,7 @@ export default function NavMenu({ name }: NavMenuProps) {
 
   return (
     <Popover className="relative">
-      <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 p-1 rounded-lg bg-purple-400">
+      <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 p-1 rounded-lg bg-gray-500 mr-5">
         <Bars3Icon className='w-8 h-8 text-white ' />
       </Popover.Button>
 

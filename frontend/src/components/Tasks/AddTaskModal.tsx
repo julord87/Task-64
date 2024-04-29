@@ -83,7 +83,7 @@ export default function AddTaskModal() {
 
                   <p className="text-xl font-bold mb-8">
                     Llena el formulario y crea {""}
-                    <span className="text-fuchsia-600">una tarea</span>
+                    <span className="text-gray-500">una tarea</span>
                   </p>
 
                   <form
@@ -97,7 +97,7 @@ export default function AddTaskModal() {
                     />
                     <input 
                         type="submit" 
-                        className="bg-fuchsia-600 text-white font-bold py-2 px-4 rounded mt-5 cursor-pointer transition-colors w-full hover:bg-fuchsia-700"
+                        className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors w-full"
                         value="Crear Tarea"
                     />
                   </form>

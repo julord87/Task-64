@@ -80,7 +80,7 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                                 </Dialog.Title>
 
                                 <p className="text-xl font-bold">Realiza cambios a una tarea en {''}
-                                    <span className="text-fuchsia-600">este formulario</span>
+                                    <span className="text-gray-500">este formulario</span>
                                 </p>
 
                                 <form
@@ -96,7 +96,7 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                     
                                     <input
                                         type="submit"
-                                        className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+                                        className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors w-full"
                                         value='Guardar Tarea'
                                     />
                                 </form>

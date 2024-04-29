@@ -31,12 +31,12 @@ const ProjectDetailsView = () => {
                 <nav className=" my-5 flex gap-3">
                     <button
                         type="button"
-                        className="bg-purple-400 hover:bg-purple-500 text-white font-bold py-3 px-10  cursor-pointer transition-colors"
+                        className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors"
                         onClick={() => navigate(location.pathname + `?newTask=true`)}
                     >Agregar Tarea</button>
 
                     <Link
-                        className="bg-fuchsia-400 hover:bg-fuchsia-500 text-white font-bold py-3 px-10  cursor-pointer transition-colors"
+                        className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors"
                         to={'team'}
                     >Colaboradores</Link>
                 </nav>

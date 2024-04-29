@@ -20,11 +20,11 @@ const initialStatusGroups: GropuedTasks = {
 };
 
 const statusStyles : { [key: string]: string } = {
-  pending: "border-t-slate-500",
-  onHold: "border-t-red-500",
-  inProgress: "border-t-blue-500",
-  underReview: "border-t-amber-500",
-  completed: "border-t-emerald-500",
+  pending: "border-t-gray-100",
+  onHold: "border-t-gray-200",
+  inProgress: "border-t-gray-300",
+  underReview: "border-t-gray-400",
+  completed: "border-t-gray-500",
 };
 
 export default function TaskList({ tasks, manager }: TaskListProps) {

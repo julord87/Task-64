@@ -37,9 +37,9 @@ const CreateProjectView = () => {
                 <h1 className="text-5xl font-black">Crear Proyecto</h1>
                 <p className="text-2xl font-light text-gray-500 mt-5">Llena el siguiente formulario para crear un proyecto</p>
 
-                <nav className="my-5">
+                <nav className="my-6">
                     <Link
-                    className="bg-purple-400 hover:bg-purple-500 text-white font-bold py-3 px-10 rounded mt-3 cursor-pointer transition-colors"
+                    className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors"
                     to='/'
                     >Volver a proyectos</Link>
                 </nav>
@@ -57,7 +57,7 @@ const CreateProjectView = () => {
                     <input 
                         type="submit" 
                         value="Crear Proyecto"
-                        className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white uppercase font-bold cursor-pointer transition-colors"
+                        className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 cursor-pointer transition-colors w-full"
                     />
 
                 </form>
