@@ -33,8 +33,6 @@ export default function TaskCard({ task, manager }: TaskCardProps) {
       
     }
   })
-
-  console.log(user)
   
   return (
     <li className="p-5 bg-white border-slate-300 flex justify-between gap-3">
