@@ -3,7 +3,7 @@ import mongoose, { Schema, Document, Types } from "mongoose";
 export interface INote extends Document {
     content: string
     createdBy: Types.ObjectId
-    tasK: Types.ObjectId
+    task: Types.ObjectId
 }
 
 const NoteSchema: Schema = new Schema({
