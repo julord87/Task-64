@@ -76,4 +76,29 @@ router.get('/user',
     AuthController.user
 )
 
+/** Profile */
+router.put('/profile', 
+    authenticate,
+    body('name').notEmpty().withMessage("El nombre es obligatorio"),
+    body('email').notEmpty().withMessage("El correo es obligatorio").isEmail().withMessage("El correo no es valido"),
+    handleInputErrors,
+
+    AuthController.updateProfile
+)
+
+router.post('/update-password',
+    authenticate,
+    body('current_password').notEmpty().withMessage("El password actual es obligatorio"),
+    body('password').notEmpty().isLength({min: 6}).withMessage("El nuevo password es muy corto"),
+    body('password_confirmation').custom((value, {req}) => {
+        if (value !== req.body.password) {
+            throw new Error("Los passwords no coinciden")
+        }
+        return true
+    }),
+    handleInputErrors,
+
+    AuthController.updateCurrentUserPassword
+)
+
 export default router
