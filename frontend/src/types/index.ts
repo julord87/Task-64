@@ -17,8 +17,8 @@ export type RequestConfirmationCodeForm = Pick<Auth, "email">
 export type ForgotPasswordForm = Pick<Auth, "email">
 export type NewPasswordForm = Pick<Auth, "password" | "password_confirmation">
 export type UpdateCurrentUserPasswordForm = Pick<Auth, "current_password" | "password" | "password_confirmation">
-
 export type ConfirmToken = Pick<Auth, "token">
+export type CheckPasswordForm = Pick<Auth, "password">
 
 /** Users  */
 export const userSchema = authSchema.pick({ name: true, email: true }).extend({_id: z.string()})
@@ -81,6 +81,12 @@ export const dashboardProjectSchema = z.array(
         manager: true
     })
 )
+
+export const editProjectSchema = projectSchema.pick({
+    projectName: true,
+    clientName: true,
+    description: true
+})
 
 export type Project = z.infer<typeof projectSchema>
 export type ProjectFormData = Pick<Project, "projectName" | "clientName" | "description">
