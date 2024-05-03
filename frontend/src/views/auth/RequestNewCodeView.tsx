@@ -11,7 +11,7 @@ export default function RegisterView() {
         email: ''
     }
 
-    const { register, handleSubmit, reset, formState: { errors } } = useForm({ defaultValues: initialValues });
+    const { register, handleSubmit, formState: { errors } } = useForm({ defaultValues: initialValues });
 
     const { mutate } = useMutation({
         mutationFn: requestConfirmationCode,

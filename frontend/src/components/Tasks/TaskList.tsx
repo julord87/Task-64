@@ -1,5 +1,5 @@
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
-import { Project, Task, TaskStatus } from "@/types/index";
+import { Project, TaskProject, TaskStatus } from "@/types/index";
 import TaskCard from "./TaskCard";
 import { statusTranslations } from "@/locales/es";
 import DropTask from "./DropTask";
@@ -9,12 +9,12 @@ import { updateStatus } from "@/api/TaskAPI";
 import { useParams } from "react-router-dom";
 
 type TaskListProps = {
-  tasks: Task[];
+  tasks: TaskProject[];
   manager: Project["manager"];
 };
 
 type GropuedTasks = {
-  [key: string]: Task[];
+  [key: string]: TaskProject[];
 };
 
 const initialStatusGroups: GropuedTasks = {
@@ -64,8 +64,8 @@ export default function TaskList({ tasks, manager }: TaskListProps) {
       const status = over.id as TaskStatus
       mutate({projectId, taskId, status})
 
-      queryClient.setQueryData(["project", projectId], (prevData) => {
-        const updatedTasks = prevData?.tasks.map((task : Task) => {
+      queryClient.setQueryData(["project", projectId], (prevData: Project) => {
+        const updatedTasks = prevData?.tasks.map((task) => {
           if(task._id === taskId) {
             return {
               ...task,
@@ -79,7 +79,7 @@ export default function TaskList({ tasks, manager }: TaskListProps) {
           ...prevData,
           tasks: updatedTasks
         })
-      })
+      }) 
     }
   };
 
