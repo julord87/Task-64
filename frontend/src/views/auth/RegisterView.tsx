@@ -42,7 +42,7 @@ export default function RegisterView() {
 
       <form
         onSubmit={handleSubmit(handleRegister)}
-        className="space-y-8 p-10  bg-white mt-10"
+        className="space-y-8 p-10 mt-10 bg-stone-50 border-2 border-black"
         noValidate
       >
         <div className="flex flex-col gap-5">
@@ -54,7 +54,7 @@ export default function RegisterView() {
             id="email"
             type="email"
             placeholder="Email de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3  border-gray-300 border focus:border-red-600"
             {...register("email", {
               required: "El Email de registro es obligatorio",
               pattern: {
@@ -75,7 +75,7 @@ export default function RegisterView() {
           <input
             type="name"
             placeholder="Nombre de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3  border-gray-300 border focus:border-red-600"
             {...register("name", {
               required: "El Nombre de usuario es obligatorio",
             })}
@@ -93,7 +93,7 @@ export default function RegisterView() {
           <input
             type="password"
             placeholder="Password de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3  border-gray-300 border focus:border-red-600"
             {...register("password", {
               required: "El Password es obligatorio",
               minLength: {
@@ -116,7 +116,7 @@ export default function RegisterView() {
             id="password_confirmation"
             type="password"
             placeholder="Repite Password de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3  border-gray-300 border focus:border-red-600"
             {...register("password_confirmation", {
               required: "Repetir Password es obligatorio",
               validate: value => value === password || 'Los Passwords no son iguales'
@@ -131,19 +131,19 @@ export default function RegisterView() {
         <input
           type="submit"
           value='Registrarme'
-          className="bg-gray-600 hover:bg-gray-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="shadow-md bg-stone-50 hover:bg-gray-200 w-full p-3 border-2 border-gray-800 text-gray-600 font-black  text-xl cursor-pointer"
         />
       </form>
 
       <nav className=" mt-10 flex flex-col space-y-4">
           <Link
             to={'/auth/login'}
-            className=" text-center text-gray-300 font-normal"
+            className=" text-center text-gray-300 font-normal hover:text-red-100" 
           >¿Ya tienes una cuenta? Iniciar sesión</Link>
 
           <Link
             to={'/auth/forgot-password'}
-            className=" text-center text-gray-300 font-normal"
+            className=" text-center text-gray-300 font-normal hover:text-red-100"
           >¿Olvidaste tu password?</Link>
       </nav>
     </>

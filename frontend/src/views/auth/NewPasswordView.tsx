@@ -11,10 +11,8 @@ export default function NewPasswordView() {
   return (
     <>
       <h1 className="text-5xl font-black text-white">Reestablecer Password</h1>
-      <p className="text-2xl font-light text-white mt-5">
-        Ingresa el token que recibiste {''}
-        <span className=" text-fuchsia-500 font-bold"> a tu correo</span>
-      </p>
+      <p className="text-2xl font-light text-red-50 mt-5">
+        Ingresa el token que recibiste en tu correo</p>
 
       {!isValidToken ? 
         <NewPasswordToken token={token} setToken={setToken} setIsValidToken={setIsValidToken} /> : 

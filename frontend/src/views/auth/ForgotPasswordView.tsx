@@ -36,7 +36,7 @@ export default function ForgotPasswordView() {
 
       <form
         onSubmit={handleSubmit(handleForgotPassword)}
-        className="space-y-8 p-10 mt-10  bg-white"
+        className="space-y-8 p-10 mt-10  bg-stone-50 border-2 border-black"
         noValidate
       >
         <div className="flex flex-col gap-5">
@@ -48,7 +48,7 @@ export default function ForgotPasswordView() {
             id="email"
             type="email"
             placeholder="Email de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3  border-gray-300 border focus:border-red-600"
             {...register("email", {
               required: "El Email de registro es obligatorio",
               pattern: {
@@ -65,21 +65,21 @@ export default function ForgotPasswordView() {
         <input
           type="submit"
           value='Enviar Instrucciones'
-          className="bg-gray-600 hover:bg-gray-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="shadow-md bg-stone-50 hover:bg-gray-200 w-full p-3 border-2 border-gray-800 text-gray-600 font-black  text-xl cursor-pointer"
         />
       </form>
 
       <nav className="mt-10 flex flex-col space-y-4">
         <Link
           to='/auth/login'
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal hover:text-red-100"
         >
           ¿Ya tienes cuenta? Iniciar Sesión
         </Link>
 
         <Link
           to='/auth/register'
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal hover:text-red-100"
         >
           ¿No tienes cuenta? Crea una
         </Link>

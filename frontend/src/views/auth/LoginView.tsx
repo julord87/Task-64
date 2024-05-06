@@ -30,13 +30,13 @@ export default function LoginView() {
   return (
     <>
       <h1 className="text-5xl font-black text-white">Iniciar Sesión</h1>
-      <p className="text-2xl font-light text-white mt-5">
+      <p className="text-2xl font-light text-red-50 mt-5">
           Comienza a planear tus proyectos de forma eficiente.
       </p>
 
       <form
         onSubmit={handleSubmit(handleLogin)}
-        className="space-y-8 p-10 mt-10 bg-white"
+        className="space-y-8 p-10 mt-10 bg-stone-50 border-2 border-black shadow-md"
         noValidate
       >
         <div className="flex flex-col gap-5">
@@ -48,7 +48,7 @@ export default function LoginView() {
             id="email"
             type="email"
             placeholder="Email de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3 border-gray-300 border focus:border-red-500"
             {...register("email", {
               required: "El Email es obligatorio",
               pattern: {
@@ -70,7 +70,7 @@ export default function LoginView() {
           <input
             type="password"
             placeholder="Password de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3  border-gray-300 border  focus:border-red-500"
             {...register("password", {
               required: "El Password es obligatorio",
             })}
@@ -83,19 +83,19 @@ export default function LoginView() {
         <input
           type="submit"
           value='Iniciar Sesión'
-          className="bg-gray-600 hover:bg-gray-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="shadow-md bg-stone-50 hover:bg-gray-200 w-full p-3 border-2 border-gray-800 text-gray-600 font-black  text-xl cursor-pointer"
         />
       </form>
 
       <nav className=" mt-10 flex flex-col space-y-4">
           <Link
             to={'/auth/register'}
-            className=" text-center text-gray-300 font-normal"
+            className=" text-center text-gray-300 font-normal hover:text-red-50"
           >¿No tienes cuenta? Crea una!</Link>
 
           <Link
             to={'/auth/forgot-password'}
-            className=" text-center text-gray-300 font-normal"
+            className=" text-center text-gray-300 font-normal hover:text-red-50"
           >¿Olvidaste tu password?</Link>
       </nav>
     </>
