@@ -73,16 +73,14 @@ export default function DeleteProjectModal() {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
+                            <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden border-2 border-gray-800 bg-stone-50 text-left align-middle shadow-xl transition-all p-16">
 
                                 <Dialog.Title
                                     as="h3"
                                     className="font-black text-4xl  my-5"
                                 >Eliminar Proyecto </Dialog.Title>
 
-                                <p className="text-xl font-bold">Confirma la eliminación del proyecto {''}
-                                    <span className="text-gray-600">colocando tu password</span>
-                                </p>
+                                <p className="text-xl font-bold">Confirma la eliminación del proyecto colocando tu password</p>
 
                                 <form
                                     className="mt-10 space-y-5"
@@ -99,7 +97,7 @@ export default function DeleteProjectModal() {
                                             id="password"
                                             type="password"
                                             placeholder="Password Inicio de Sesión"
-                                            className="w-full p-3  border-gray-300 border"
+                                            className="w-full p-3  border-gray-300 border focus:border-red-500"
                                             {...register("password", {
                                                 required: "El password es obligatorio",
                                             })}
@@ -111,7 +109,7 @@ export default function DeleteProjectModal() {
 
                                     <input
                                         type="submit"
-                                        className=" bg-gray-600 hover:bg-gray-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+                                        className=" bg-red-50 hover:bg-red-100 w-full p-3 border-2 border-gray-800 text-gray-600 font-black  text-xl cursor-pointer"
                                         value='Eliminar Proyecto'
                                     />
                                 </form>

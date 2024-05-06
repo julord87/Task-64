@@ -39,13 +39,13 @@ const CreateProjectView = () => {
 
                 <nav className="my-6">
                     <Link
-                    className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors"
+                    className="hover:bg-gray-300 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors shadow-md"
                     to='/'
                     >Volver a proyectos</Link>
                 </nav>
 
                 <form
-                    className="bg-white shadow-md rounded p-10 mt-10"
+                    className="bg-stone-50 shadow-md rounded p-10 mt-10 border-2 border-gray-800"
                     onSubmit={handleSubmit(handleForm)}
                     noValidate
                 >
@@ -57,7 +57,7 @@ const CreateProjectView = () => {
                     <input 
                         type="submit" 
                         value="Crear Proyecto"
-                        className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 cursor-pointer transition-colors w-full"
+                        className="hover:bg-gray-300 border-2 border-black font-bold py-3 px-10 cursor-pointer transition-colors w-full shadow-md"
                     />
 
                 </form>

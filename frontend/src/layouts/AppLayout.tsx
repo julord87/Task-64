@@ -13,9 +13,9 @@ const AppLayout = () => {
 
   if(data) return (
     <>
-      <header className="bg-gray-950 py-5">
+      <header className="bg-gray-800 py-5">
         <div className="max-h-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center">
-          <div className="w-64 ">
+          <div className="w-64 mx-5">
             <Link to={"/"}>
               <Logo />
             </Link>
@@ -32,7 +32,7 @@ const AppLayout = () => {
       </section>
 
       <footer className="py-5">
-        <p className="text-center">
+        <p className="text-center text-gray-800">
           Todos los derechos reservados {new Date().getFullYear()}
         </p>
       </footer>

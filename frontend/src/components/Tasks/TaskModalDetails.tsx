@@ -80,7 +80,7 @@ export default function TaskModalDetails() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
+                                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden border-2 border-gray-800 bg-white text-left align-middle shadow-xl transition-all p-16">
                                     <p className='text-sm text-slate-400'>Agregada el: {formatDate(data.createdAt)}</p>
                                     <p className='text-sm text-slate-400'>Última actualización: {formatDate(data.updatedAt)}</p>
                                     <Dialog.Title
@@ -110,7 +110,7 @@ export default function TaskModalDetails() {
                                         <label className='font-bold'>Estado Actual:</label>
 
                                         <select 
-                                            className='w-full p-3 bg-white border border-gray-300'
+                                            className='w-full p-3 bg-white border border-gray-300 focus:border-red-500'
                                             value={data.status}
                                             onChange={handleChange}
                                         >

@@ -52,13 +52,13 @@ const EditProjectForm = ({data, projectId} : EditProjectFormProps) => {
 
                 <nav className="my-5">
                     <Link
-                    className="bg-purple-400 hover:bg-purple-500 text-white font-bold py-3 px-10 rounded mt-3 cursor-pointer transition-colors"
+                    className="hover:bg-gray-300 border-2 border-gray-800 font-bold text-gray-800 py-3 px-10 mt-3 cursor-pointer transition-colors shadow-md"
                     to='/'
                     >Volver a proyectos</Link>
                 </nav>
 
                 <form
-                    className="bg-white shadow-md rounded p-10 mt-10"
+                    className="bg-stone-50 border-2 border-gray-800 shadow-md p-10 mt-10 rounded"
                     onSubmit={handleSubmit(handleForm)}
                     noValidate
                 >
@@ -70,7 +70,7 @@ const EditProjectForm = ({data, projectId} : EditProjectFormProps) => {
                     <input 
                         type="submit" 
                         value="Guardar Cambios"
-                        className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white uppercase font-bold cursor-pointer transition-colors"
+                        className="hover:bg-gray-300 border-2 border-gray-800 font-bold text-gray-800 py-3 px-10 mt-3 cursor-pointer transition-colors shadow-md w-full"
                     />
 
                 </form>

@@ -71,7 +71,7 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
+                            <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden border-2 border-gray-800 bg-white text-left align-middle shadow-xl transition-all p-16">
                                 <Dialog.Title
                                     as="h3"
                                     className="font-black text-4xl  my-5"
@@ -79,9 +79,7 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                                     Editar Tarea
                                 </Dialog.Title>
 
-                                <p className="text-xl font-bold">Realiza cambios a una tarea en {''}
-                                    <span className="text-gray-500">este formulario</span>
-                                </p>
+                                <p className="text-xl font-bold">Realiza cambios a una tarea en este formulario</p>
 
                                 <form
                                     className="mt-10 space-y-3"

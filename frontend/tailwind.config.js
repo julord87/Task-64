@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'vt323': ['VT323', 'monospace'],
+        // Agregar la fuente VT323 como una fuente personalizada
+        // Puedes agregar otras fuentes y sus respectivos fallbacks aquí
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

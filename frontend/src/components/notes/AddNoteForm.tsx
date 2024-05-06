@@ -51,7 +51,7 @@ export default function AddNoteForm() {
                 id="content"
                 type="text" 
                 placeholder="Contenido de la nota"
-                className="w-full p-3 border border-gray-300"
+                className="w-full p-3 border border-gray-300 focus:border-red-500"
                 {...register("content", {
                     required: "El contenido de la nota es obligatorio",
                 })}

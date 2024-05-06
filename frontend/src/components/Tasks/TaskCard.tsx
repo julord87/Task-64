@@ -43,13 +43,13 @@ export default function TaskCard({ task, manager }: TaskCardProps) {
   } : undefined
   
   return (
-    <li className="p-5 bg-white flex justify-between gap-3">
+    <li className="p-5 bg-stone-100 flex justify-between gap-3">
       <div 
       {...listeners}
       {...attributes}
       ref={setNodeRef}
       style={style}
-      className=" min-w-0 flex flex-col gap-y-4">
+      className=" min-w-0 flex flex-col gap-y-4 cursor-default">
         <p
           className=" text-xl font-bold text-slate-600 text-left"
         >
@@ -62,7 +62,7 @@ export default function TaskCard({ task, manager }: TaskCardProps) {
         <Menu as="div" className="relative flex-none">
           <Menu.Button className="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900">
             <span className="sr-only">opciones</span>
-            <EllipsisVerticalIcon className="h-6 w-6" aria-hidden="true" />
+            <EllipsisVerticalIcon className="h-5 w-5" aria-hidden="true" />
           </Menu.Button>
           <Transition
             as={Fragment}
@@ -73,7 +73,7 @@ export default function TaskCard({ task, manager }: TaskCardProps) {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >     
-            <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
+            <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right border-2 border-gray-800 bg-red-50 py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
               <Menu.Item>
                 <button
                   type="button"

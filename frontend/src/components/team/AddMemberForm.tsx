@@ -47,7 +47,7 @@ export default function AddMemberForm() {
                         id="name"
                         type="text"
                         placeholder="E-mail del usuario a Agregar"
-                        className="w-full p-3  border-gray-300 border"
+                        className="w-full p-3  border-gray-300 border focus:border-red-500"
                         {...register("email", {
                             required: "El Email es obligatorio",
                             pattern: {
@@ -63,7 +63,7 @@ export default function AddMemberForm() {
 
                 <input
                     type="submit"
-                    className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors w-full"
+                    className="hover:bg-gray-200 shadow-md border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors w-full"
                     value='Buscar Usuario'
                 />
             </form>

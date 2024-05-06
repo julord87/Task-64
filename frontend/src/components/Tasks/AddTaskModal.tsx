@@ -76,18 +76,17 @@ export default function AddTaskModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
+                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden border-2 shadow-md border-gray-800 bg-stone-50 text-left align-middle shadow-xl transition-all p-16">
                   <Dialog.Title as="h3" className="font-black text-4xl  my-5">
                     Nueva Tarea
                   </Dialog.Title>
 
                   <p className="text-xl font-bold mb-8">
-                    Llena el formulario y crea {""}
-                    <span className="text-gray-500">una tarea</span>
+                    Llena el formulario y crea una tarea
                   </p>
 
                   <form
-                    className=" mt10 space-y-3"
+                    className=" mt10 space-y-3 focus:border-gray-500"
                     onSubmit={handleSubmit(handleCreateTask)}
                     noValidate
                   >
@@ -97,7 +96,7 @@ export default function AddTaskModal() {
                     />
                     <input 
                         type="submit" 
-                        className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors w-full"
+                        className="hover:bg-gray-200 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors w-full shadow-md"
                         value="Crear Tarea"
                     />
                   </form>
