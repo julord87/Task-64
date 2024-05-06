@@ -51,7 +51,7 @@ export default function AddNoteForm() {
                 id="content"
                 type="text" 
                 placeholder="Contenido de la nota"
-                className="w-full p-3 border border-gray-300 focus:border-red-500"
+                className="w-full p-3 border border-gray-300 focus:border-red-500 bg-stone-50"
                 {...register("content", {
                     required: "El contenido de la nota es obligatorio",
                 })}
@@ -62,7 +62,7 @@ export default function AddNoteForm() {
         <input 
             type="submit"
             value="Crear Nota" 
-            className="border-2 border-black p-2 w-full hover:bg-gray-100 cursor-pointer"
+            className="border-2 border-black p-2 w-full hover:bg-gray-200 shadow-md cursor-pointer"
         />
     </form>
   )

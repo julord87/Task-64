@@ -94,7 +94,7 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                     
                                     <input
                                         type="submit"
-                                        className="hover:bg-gray-100 border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors w-full"
+                                        className="hover:bg-gray-200 shadow-md border-2 border-black font-bold py-3 px-10 mt-3 cursor-pointer transition-colors w-full"
                                         value='Guardar Tarea'
                                     />
                                 </form>

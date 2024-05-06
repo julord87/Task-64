@@ -32,7 +32,7 @@ export default function ChangePasswordView() {
 
         <form
           onSubmit={handleSubmit(handleChangePassword)}
-          className=" mt-10 space-y-5 bg-white shadow-lg p-10 rounded-lg"
+          className=" mt-10 space-y-5 bg-stone-50 shadow-md p-10 border-2 border-gray-800"
           noValidate
         >
           <div className="mb-5 space-y-3">
@@ -44,7 +44,7 @@ export default function ChangePasswordView() {
               id="current_password"
               type="password"
               placeholder="Password Actual"
-              className="w-full p-3  border border-gray-200"
+              className="w-full p-3  border border-gray-200 focus:border-red-500"
               {...register("current_password", {
                 required: "El password actual es obligatorio",
               })}
@@ -63,7 +63,7 @@ export default function ChangePasswordView() {
               id="password"
               type="password"
               placeholder="Nuevo Password"
-              className="w-full p-3  border border-gray-200"
+              className="w-full p-3  border border-gray-200 focus:border-red-500"
               {...register("password", {
                 required: "El Nuevo Password es obligatorio",
                 minLength: {
@@ -86,7 +86,7 @@ export default function ChangePasswordView() {
               id="password_confirmation"
               type="password"
               placeholder="Repetir Password"
-              className="w-full p-3  border border-gray-200"
+              className="w-full p-3  border border-gray-200 focus:border-red-500"
               {...register("password_confirmation", {
                 required: "Este campo es obligatorio",
                 validate: value => value === password || 'Los Passwords no son iguales'
@@ -100,7 +100,7 @@ export default function ChangePasswordView() {
           <input
             type="submit"
             value='Cambiar Password'
-            className="bg-gray-600 w-full p-3 text-white uppercase font-bold hover:bg-gray-700 cursor-pointer transition-colors"
+            className="bg-stone-50 w-full p-3 text-gray-600 shadow-md border-2 border-gray-800 uppercase font-bold hover:bg-gray-200 cursor-pointer transition-colors"
           />
         </form>
       </div>
