@@ -5,6 +5,7 @@ import { PinInput, PinInputField } from '@chakra-ui/pin-input';
 import { Link } from 'react-router-dom';
 import { validateToken } from '@/api/AuthAPI';
 import { toast } from 'react-toastify';
+import '../../utils/custom-toastify.css';
 
 type NewPasswordTokenProps = {
     token: ConfirmToken['token']

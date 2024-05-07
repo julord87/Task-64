@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ConfirmToken } from "@/types/index";
 import { confirmAccount } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 
 export default function ConfirmAccountView() {
     const [token, setToken] = useState<ConfirmToken['token']>('')

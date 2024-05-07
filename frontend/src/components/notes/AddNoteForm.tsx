@@ -4,6 +4,7 @@ import ErrorMessage from "../ErrorMessage"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { createNote } from "@/api/NoteAPI"
 import { toast } from "react-toastify"
+import '../../utils/custom-toastify.css';
 import { useLocation, useParams } from "react-router-dom"
 export default function AddNoteForm() {
 

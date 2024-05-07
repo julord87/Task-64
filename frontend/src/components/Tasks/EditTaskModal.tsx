@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import TaskForm from './TaskForm';
 import { updateTask } from '@/api/TaskAPI';
 import { toast } from 'react-toastify';
+import '../../utils/custom-toastify.css';
 
 type EditTaskModalProps = {
     data: Task

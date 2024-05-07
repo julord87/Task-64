@@ -4,6 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import { ForgotPasswordForm } from "../../types";
 import ErrorMessage from "@/components/ErrorMessage";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 import { resetPassword } from "@/api/AuthAPI";
 
 export default function ForgotPasswordView() {
@@ -29,10 +30,8 @@ export default function ForgotPasswordView() {
   return (
     <>
         <h1 className="text-5xl font-black text-white">Reestablecer Password</h1>
-        <p className="text-2xl font-light text-white mt-5">
-            ¿Olvidaste tu Password? Coloca tu correo y {''}
-            <span className=" text-gray-300 font-bold">recibe instrucciones</span>
-        </p>
+        <p className="text-2xl font-light text-red-50 mt-5">
+            ¿Olvidaste tu Password? Coloca tu correo y recibe instrucciones</p>
 
       <form
         onSubmit={handleSubmit(handleForgotPassword)}

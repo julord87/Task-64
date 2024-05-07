@@ -5,6 +5,7 @@ import { UserLoginForm } from "@/types/index";
 import ErrorMessage from "@/components/ErrorMessage";
 import { authenticateUser } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 
 export default function LoginView() {
 

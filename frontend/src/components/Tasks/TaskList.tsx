@@ -5,6 +5,7 @@ import { statusTranslations } from "@/locales/es";
 import DropTask from "./DropTask";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 import { updateStatus } from "@/api/TaskAPI";
 import { useParams } from "react-router-dom";
 

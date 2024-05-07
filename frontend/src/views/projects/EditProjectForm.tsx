@@ -5,6 +5,7 @@ import { Project, ProjectFormData } from "@/types/index"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { updateProject } from "@/api/ProjectAPI"
 import { toast } from "react-toastify"
+import '../../utils/custom-toastify.css';
 
 type EditProjectFormProps = {
     data: ProjectFormData

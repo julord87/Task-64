@@ -1,0 +1,34 @@
+
+.Toastify__toast-body {
+    font-family: 'VT323', sans-serif;
+  }
+
+  /* Estilos personalizados para los Toasts */
+.Toastify__toast--success {
+    background-color: #fef2f2; /* Color de fondo para Toasts de éxito */
+    color: #1e293b; /* Color del texto para Toasts de éxito */
+    border: 2px solid; /* Añade un borde de 2px */
+    border-color: #030712; /* Color de borde transparente para que no se muestre */
+    border-radius: 0; /* Elimina los bordes redondeados */
+  }
+  
+  .Toastify__toast--error {
+    background-color: #fef2f2; /* Color de fondo para Toasts de error */
+    color: #1e293b; /* Color del texto para Toasts de error */
+    border: 2px solid; /* Añade un borde de 2px */
+    border-color: #030712; /* Color de borde transparente para que no se muestre */
+    border-radius: 0; /* Elimina los bordes redondeados */
+  }
+
+
+/* Barra de progreso para Toasts de éxito */
+.Toastify__toast--success .Toastify__progress-bar {
+    background-color: #a8a29e; /* Color de la barra de progreso para Toasts de éxito */
+  }
+  
+  /* Barra de progreso para Toasts de error */
+  .Toastify__toast--error .Toastify__progress-bar {
+    background-color: #a8a29e; /* Color de la barra de progreso para Toasts de error */
+  }
+
+  

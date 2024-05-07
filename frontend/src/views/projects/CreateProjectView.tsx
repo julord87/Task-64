@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import { useMutation } from "@tanstack/react-query"
 import { toast } from "react-toastify"
+import '../../utils/custom-toastify.css';
 import ProjectForm from "@/components/projects/ProjectForm"
 import { ProjectFormData } from "@/types/index"
 import { createProject } from "@/api/ProjectAPI"

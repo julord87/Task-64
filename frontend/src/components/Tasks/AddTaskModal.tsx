@@ -7,6 +7,7 @@ import TaskForm from "./TaskForm";
 import { TaskFormData } from "@/types/index";
 import { createTask } from "@/api/TaskAPI";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 
 export default function AddTaskModal() {
 

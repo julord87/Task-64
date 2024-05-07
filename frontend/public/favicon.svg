@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 32px;
+        fill: #ffe7e7;
+        font-family: "Commodore 64";
+      }
+    </style>
+  </defs>
+  <image id="Fondo" width="50" height="50" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAUklEQVRoge3PAQ0AIAzAsIN/z8dGQ1YHPbu784H7Q2KKgIpoimiKaIpoimiKaIpoimiKaIpoimiKaIpoimiKaIpoimiKaIpoimiKaIpoilBm5gE8xARgWjgljQAAAABJRU5ErkJggg=="/>
+  <image id="Capa_1" data-name="Capa 1" width="50" height="50" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAVElEQVRoge3PAQ3AMAzAsH7Myh/URyOabAb+dvefB5wXEiMSJFIjUiNSI1IjUiNSI1IjUiNSI1IjUiNSI1IjUiNSI1IjUiNSI1IjUiNSI1IjkjIzF9McAiaQCBdsAAAAAElFTkSuQmCC"/>
+  <text id="_64" data-name="64" class="cls-1" x="-1.215" y="35.861">64</text>
+</svg>

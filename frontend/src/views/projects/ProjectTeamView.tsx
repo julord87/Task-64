@@ -6,6 +6,7 @@ import AddMemberModal from "@/components/team/AddMemberModal";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 
 export default function ProjectTeamView() {
 

@@ -5,6 +5,7 @@ import { RequestConfirmationCodeForm } from "../../types";
 import ErrorMessage from "@/components/ErrorMessage";
 import { requestConfirmationCode } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 
 export default function RegisterView() {
     const initialValues: RequestConfirmationCodeForm = {

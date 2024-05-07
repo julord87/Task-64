@@ -4,6 +4,7 @@ import { User, UserProfileForm } from "@/types/index"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { updateProfile } from "@/api/ProfileAPI"
 import { toast } from "react-toastify"
+import '../../utils/custom-toastify.css';
 
 type ProfileFormProps = {
     data: User

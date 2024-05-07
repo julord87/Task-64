@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { TeamMember } from "@/types/index"
 import { addUserToProject } from "@/api/TeamAPI"
 import { toast } from "react-toastify"
+import '../../utils/custom-toastify.css';
 import { useNavigate, useParams } from "react-router-dom"
 
 type SearchResultProps = {

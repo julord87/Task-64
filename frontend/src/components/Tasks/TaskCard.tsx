@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { useQueryClient, useMutation } from "@tanstack/react-query"
 import { deleteTask } from "@/api/TaskAPI"
 import { toast } from "react-toastify"
+import '../../utils/custom-toastify.css';
 import { useAuth } from "@/hooks/useAuth"
 import { isManager } from "@/utils/policies"
 import { useDraggable } from "@dnd-kit/core"

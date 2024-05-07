@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import ErrorMessage from "@/components/ErrorMessage";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 import { updatePasswordWithToken } from "@/api/AuthAPI";
 
 type NewPasswordFormProps = {

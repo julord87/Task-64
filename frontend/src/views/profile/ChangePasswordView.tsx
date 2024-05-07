@@ -4,6 +4,7 @@ import { UpdateCurrentUserPasswordForm } from "@/types/index";
 import { useMutation } from "@tanstack/react-query";
 import { changePasword } from "@/api/ProfileAPI";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 
 export default function ChangePasswordView() {
   const initialValues : UpdateCurrentUserPasswordForm = {

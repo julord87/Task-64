@@ -7,6 +7,7 @@ import { CheckPasswordForm } from '@/types/index';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { checkPassword } from '@/api/AuthAPI';
 import { toast } from 'react-toastify';
+import '../../utils/custom-toastify.css';
 import { deletProject } from '@/api/ProjectAPI';
 
 export default function DeleteProjectModal() {

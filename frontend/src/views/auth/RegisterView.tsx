@@ -5,6 +5,7 @@ import { UserRegistrationForm } from "@/types/index";
 import ErrorMessage from "@/components/ErrorMessage";
 import { createAccount } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
+import '../../utils/custom-toastify.css';
 
 export default function RegisterView() {
   
@@ -35,10 +36,8 @@ export default function RegisterView() {
   return (
     <>
       <h1 className="text-5xl font-black text-white">Crear Cuenta</h1>
-      <p className="text-2xl font-light text-white mt-5">
-        Llena el formulario para {''}
-        <span className=" text-gray-300 font-bold"> crear tu cuenta</span>
-      </p>
+      <p className="text-2xl font-light text-red-50 mt-5">
+        Llena el formulario para crear tu cuenta</p>
 
       <form
         onSubmit={handleSubmit(handleRegister)}
