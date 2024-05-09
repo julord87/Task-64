@@ -20,7 +20,7 @@ export default function AddNoteForm() {
         content: ''
     }
 
-    const { register, handleSubmit, reset, formState: { errors }} = useForm({
+    const { register, handleSubmit, formState: { errors }} = useForm({
         defaultValues: initialValues
     })
 
